@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faylotto Claim ETH DApp</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
-    <!-- Favicons -->
     <link href="img/logo.svg" rel="icon">
     <link href="img/logo.svg" rel="apple-touch-icon">
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&display=swap" rel="stylesheet">
@@ -13,7 +12,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <style>
-    /* Body */
 body {
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
@@ -30,10 +28,9 @@ body {
     align-items: center;
     overflow-x: hidden;
     font-size: 16px;
-    padding-top: 70px; /* Memberikan ruang untuk navbar */
+    padding-top: 70px;
 }
         
-/* Container */
 .container {
     width: 100%;
     max-width: 1300px;
@@ -45,7 +42,7 @@ body {
     backdrop-filter: blur(10px);
     box-sizing: border-box;
     align-items: center;
-    margin-top: 20px; /* Tambahkan jarak dari navbar */
+    margin-top: 20px;
 }
 
 h1, h2 {
@@ -65,7 +62,6 @@ h3 {
     margin-bottom: 15px;
 }
 
-/* Gaya utama untuk tombol */
 .btn {
     font-size: 1em;
     padding: 10px 16px;
@@ -80,14 +76,12 @@ h3 {
     font-family: 'Ubuntu', sans-serif;
 }
 
-/* Kontainer tombol */
 .button-container {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Jarak antar tombol diperbesar */
+    gap: 20px;
 }
 
-/* Efek Neon Glow */
 .btn::before {
     content: "";
     position: absolute;
@@ -100,7 +94,6 @@ h3 {
     opacity: 1;
 }
 
-/* Efek Hover */
 .btn:hover::before {
     filter: blur(1.2em);
     opacity: 1;
@@ -111,7 +104,6 @@ h3 {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
-/* Efek Tekan */
 .btn:active {
     transform: scale(0.95);
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
@@ -121,7 +113,6 @@ h3 {
     filter: blur(0.2em);
 }
 
-/* Efek Gelombang saat Diklik */
 .btn::after {
     content: "";
     position: absolute;
@@ -161,7 +152,6 @@ img {
     margin-right: 5px;
 }
 
-/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -178,10 +168,9 @@ img {
     width: 100%;
     max-width: 1250px;
     z-index: 1000;
-    height: 60px; /* Tambahkan tinggi navbar agar lebih jelas */
+    height: 60px;
 }
 
-/* Logo */
 .logo {
     display: flex;
     align-items: center;
@@ -192,7 +181,6 @@ img {
     margin-right: 10px;
 }
 
-/* Menu Links */
 .nav-links {
     display: flex;
     gap: 20px;
@@ -208,7 +196,6 @@ img {
     color: #00ff66;
 }
 
-/* Hamburger Button */
 .hamburger {
     display: none;
     font-size: 24px;
@@ -216,13 +203,11 @@ img {
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* Efek Hover Hamburger */
 .hamburger:hover {
     transform: rotate(90deg) scale(1.2);
     color: #00ff66;
 }
 
-/* Responsive - Mobile */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
@@ -249,7 +234,6 @@ img {
     }
 }
 
-/* Animasi Slide-in Menu */
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -265,8 +249,8 @@ footer {
         text-align: center;
         margin-top: 20px;
         padding: 10px;
-        background: #111; /* Warna gelap */
-        color: #ddd; /* Warna teks */
+        background: #111;
+        color: #ddd;
         font-size: 12px;
         width: 100%;
         max-width: 1250px;
@@ -277,26 +261,25 @@ footer {
     }
 
     .social-icons a {
-    background: rgba(255, 255, 255, 0.2); /* Transparan seperti kaca */
-    border-radius: 10px; /* Agar sedikit membulat */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
     padding: 10px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: white; /* Warna ikon */
+    color: white;
     font-size: 15px;
     margin: 0 5px;
     text-decoration: none;
     transition: transform 0.5s ease, text-shadow 0.5s ease, box-shadow 0.5s ease;
-    box-shadow: 0 0 10px rgba(0, 0, 255, 0.6); /* Cahaya biru */
-    backdrop-filter: blur(10px); /* Efek blur kaca */
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.6);
+    backdrop-filter: blur(10px);
 }
 
-/* Efek saat hover */
 .social-icons a:hover {
-    color: #1a88ff; /* Warna biru neon */
-    text-shadow: 0 0 10px #1a88ff, 0 0 20px #1a88ff, 0 0 30px #1a88ff; /* Glow lebih intens */
-    box-shadow: 0 0 20px rgba(0, 0, 255, 1), 0 0 30px rgba(0, 0, 255, 0.8); /* Shadow lebih terang */
+    color: #1a88ff;
+    text-shadow: 0 0 10px #1a88ff, 0 0 20px #1a88ff, 0 0 30px #1a88ff;
+    box-shadow: 0 0 20px rgba(0, 0, 255, 1), 0 0 30px rgba(0, 0, 255, 0.8);
     transform: rotate(360deg); /* Efek berputar */
 }
 
@@ -314,7 +297,6 @@ footer {
     </style>
 </head>
 <body>
-    <!-- Navbar -->
 <nav class="navbar">
     <div class="logo">
         <img src="img/logo.svg" alt="Lotto Chain Logo" class="logo-img">
@@ -326,16 +308,15 @@ footer {
     -webkit-text-fill-color: transparent;
     display: inline-block;
 ">
-    Lotto Chain
+    Faylotto
         </span>
     </div>
     <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
     <ul class="nav-links" id="navMenu">
-        <a href="#features">4D Pools</a>
-        <a href="#prizes">Prizes</a>
-        <a href="lottery">LottoBalls (LB)</a>
-        <a href="hk">Hong Kong (HK)</a>
-        <a href="syd">Sydney (SYD)</a>
+        <a href="index">Statistics</a>
+        <a href="tools">Tools</a>
+        <a href="#searchInput">Search</a>
+        <a href="https://app.faylotto.xyz">Play Bet</a>
     </ul>
 </nav>
     
@@ -365,14 +346,13 @@ footer {
     <p id="claimStatus"></p>
 </main>
 
-<!-- Footer -->
 <footer>
     <div class="social-icons">
-        <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-        <a href="https://t.me/" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-        <a href="" target="_blank"><i class="fa-brands fa-discord"></i></a>
-        <a href="" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-        <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://t.me/FaylottoXyz" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+        <a href="https://t.me/Faylotto" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+        <a href="https://discord.gg/6uMYTdCZwJ" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://facebook.com/Faylotto" target="_blank"><i class="fa-brands fa-facebook"></i></a>
     </div>
     <p>© 2025 Powered By Lotto Chain. All rights reserved. Play responsibly.</p>
 </footer>
@@ -385,7 +365,6 @@ const contractABI = [{"inputs":[],"stateMutability":"nonpayable","type":"constru
         
 let provider, signer, contract;
 
-// 🔹 Fungsi Koneksi Wallet
 document.getElementById("connectWallet").addEventListener("click", async () => {
     if (!window.ethereum) {
         alert("Metamask not detected!");
@@ -393,36 +372,24 @@ document.getElementById("connectWallet").addEventListener("click", async () => {
     }
 
     try {
-        // Inisialisasi provider
         provider = new ethers.providers.Web3Provider(window.ethereum);
-
-        // Meminta akses akun MetaMask
         await provider.send("eth_requestAccounts", []);
-
-        // Mendapatkan signer
         signer = provider.getSigner();
         const userAddress = await signer.getAddress();
-
-        // Mendapatkan waktu lokal pengguna
         const localTime = new Date().toLocaleString();
-
-        // Membuat pesan signature
-        const message = `Login verification in Lotto Chain DApps\n\nAddress: ${userAddress}\nLocal Time: ${localTime}`;
+        const message = `Permission. Login verification in Faylotto DApps\n\nAddress: ${userAddress}\nLocal Time: ${localTime}`;
         const signature = await signer.signMessage(message);
 
-        console.log("Signature:", signature); // Bisa dikirim ke backend untuk verifikasi
+        console.log("Signature:", signature);
 
-        // Menghubungkan kontrak
         contract = new ethers.Contract(contractAddress, contractABI, signer);
         const balance = await provider.getBalance(userAddress);
 
-        // Menampilkan informasi di UI
         document.getElementById("networkStatus").innerHTML = `<img src="img/base.svg" width="16" height="16"> Connected to Sepolia Base Testnet`;
         document.getElementById("walletAddress").innerHTML = `Address: ${userAddress}`;
         document.getElementById("walletBalance").innerHTML = `Balance: ${ethers.utils.formatEther(balance)} ETH`;
         document.getElementById("signatureInfo").innerHTML = `Signed at: ${localTime}`;
 
-        // Menampilkan tombol dan menyembunyikan yang tidak perlu
         document.getElementById("walletAddress").classList.remove("hidden");
         document.getElementById("walletBalance").classList.remove("hidden");
         document.getElementById("signatureInfo").classList.remove("hidden");
@@ -430,27 +397,21 @@ document.getElementById("connectWallet").addEventListener("click", async () => {
         document.getElementById("disconnectWallet").classList.remove("hidden");
         document.getElementById("checkEligibility").classList.remove("hidden");
 
-        // Cek dan switch jaringan ke Sepolia Base Testnet
         await switchToSepoliaBase();
 
     } catch (error) {
         console.error("Error connecting wallet:", error.message, error.code, error);
 
-        // Tangani error spesifik agar alert tidak muncul sembarangan
         if (error.code === 4001) {
-            // User rejected request
             console.warn("User rejected the connection request.");
         } else if (error.code === -32002) {
-            // Pending connection request
             console.warn("Connection request is already pending.");
         } else {
-            // Hanya tampilkan alert jika benar-benar gagal
             alert("Failed to connect wallet. Please try again.");
         }
     }
 });
 
-// 🔹 Fungsi Disconnect Wallet
 document.getElementById("disconnectWallet").addEventListener("click", () => {
     provider = null;
     signer = null;
@@ -468,7 +429,6 @@ document.getElementById("disconnectWallet").addEventListener("click", () => {
     document.getElementById("claimStatus").innerHTML = "";
 });
 
-// 🔹 Cek & Ganti Jaringan ke Sepolia Base Testnet
 async function switchToSepoliaBase() {
     try {
         const chainId = await window.ethereum.request({ method: 'eth_chainId' });
@@ -507,7 +467,6 @@ async function switchToSepoliaBase() {
 
 document.addEventListener("DOMContentLoaded", function () {
     
-    // 🔹 Fungsi Cek Status Klaim
     document.getElementById("checkEligibility").addEventListener("click", async () => {
         try {
             let signer = provider.getSigner();
@@ -521,7 +480,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (amount.gt(0)) {
                 eligibilityStatus.innerHTML = `<img src="img/success.svg" width="16" height="16"> <span style="color: #00ca09;">Congratulations! You eligible won! Claim Your prizes</span>`;
                 claimAmount.innerHTML = `Total Prize: <span style="color: #00ca09;">${ethers.utils.formatEther(amount)} ETH</span>`;
-                claimETHButton.classList.remove("hidden"); // 🔹 Menampilkan tombol klaim
+                claimETHButton.classList.remove("hidden");
             } else {
                 eligibilityStatus.innerHTML = `<img src="img/failed.svg" width="16" height="16"> <span style="color: #ff3333;">Sorry Your are not eligible. Try playing again!</span>`;
                 claimAmount.innerHTML = `Total Prize: <span style="color: red;">0 ETH</span>`;
@@ -532,36 +491,30 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // 🔹 Fungsi Klaim ETH
     document.getElementById("claimETH").addEventListener("click", async () => {
         try {
             let claimStatus = document.getElementById("claimStatus");
-
-            // ⏳ Status: Sedang Diproses
+            
             claimStatus.innerHTML = `<img src="img/load.svg" width="16" height="16"> <span style="color: #ccc;">Processing your claim...</span>`;
 
             let tx = await contract.claimETH();
             await tx.wait();
 
-            // ✅ Status: Berhasil
             claimStatus.innerHTML = `<img src="img/success.svg" width="16" height="16"> <span style="color: #00ca09;">Prizes claim successful!</span>`;
             alert("Prizes ETH successfully claimed!");
 
-            // Refresh status klaim
             document.getElementById("checkEligibility").click();
         } catch (error) {
-            // ❌ Status: Gagal
             claimStatus.innerHTML = `<img src="img/failed.svg" width="16" height="16"> <span style="color: #ff3333;">Claim failed!</span>`;
             alert("Failed to claim prizes!");
             console.error(error);
         }
     });
 
-    // 🔹 Menampilkan Tombol "Check Eligibility" Setelah Wallet Terhubung
     document.getElementById("connectWallet").addEventListener("click", async () => {
         try {
             await provider.send("eth_requestAccounts", []);
-            document.getElementById("checkEligibility").classList.remove("hidden"); // 🔹 Menampilkan tombol
+            document.getElementById("checkEligibility").classList.remove("hidden");
         } catch (error) {
             console.error("Wallet connection failed:", error);
         }
